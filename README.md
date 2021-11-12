@@ -52,3 +52,31 @@ search='oe'
 ['Oe', // Match is on full last name (1)
 'Oel Doe', // Match is on partial start of first name (4)
 'Jane Doe'] // Match is on partial last name(6)
+
+
+# Hamming-Numbers-Dijkstra-s-Approach
+
+This was some interesting Codewars Kata.
+It asked to find a way to automatically produce the first 5000 Hamming Numbers (aka Regular Numbers) in less than 12 seconds.
+
+My solution was based in the Dijkstra's approach.
+More specifically, I created a list with the first Hamming Number (1) and added to the list every hamming number I found in the previous step.
+
+For example in the first step for the list [1]:
+
+Add 2*1, 3*1, 4*1, 5*1 and 6*1 --> [1,2,3,4,5,6]
+
+For the new list [1,2,3,4,5,6]
+Add:
+2 * <every new number you found in the previous step>
+3 * <every new number you found in the previous step>
+4 * <every new number you found in the previous step>
+5 * <every new number you found in the previous step>
+6 * <every new number you found in the previous step>
+
+Then clean the duplicate values if exist by recreating the array with the Set Keyword and sort them in ascending order.
+....
+  
+The previous workflow continues till we have a list of 5000 Hamming Numbers
+
+If you have a different/better approach I would love to hear you ;)
