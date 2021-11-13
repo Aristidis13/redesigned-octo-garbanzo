@@ -70,9 +70,9 @@
     </body>
     
     
-    <--CSS Section -->
-    <style>
-    #main {
+<--CSS Section -->
+<style>
+#main {
   color: rgba(70,70,70,1);
   text-align: center;
   margin:0;
