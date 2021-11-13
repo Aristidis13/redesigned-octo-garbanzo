@@ -1,0 +1,159 @@
+<!--HTML Section-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+<main>
+  <nav id="navbar">
+    <ul>
+      <li><a href="#welcome-section">Intro</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+  <!--It would look better than mine if it had an svg animation behind the message and bigger letters-->
+  <section class="horizontal-item" id="welcome-section"><h1>Welcome! I'm Aris and this is not my portfolio site. I did it strictly for fun and educational purposes!</h1></section>
+  <section id="projects" class="horizontal-item">
+    <h2> My Projects</h2>
+    <div class="project-tile">
+      <a class="project-link" href="https://github.com/Aristidis13/Parallellization-with-OpenMP-Framework" target="_blank"><h2 class="project-title">Parallelization with OpenMp Framework</h2>
+      <p>The project examines 4 schedules of parallelization and their speed perforfance for a non-distributed workload with the OpenMP Framework and C++ as the programming language. I also optimized the code for speed and performance. Operating System that was used is UBUNTU 18.04.02 edition. The code can be found in Github and the exercise can be found here.</p>
+        </a>
+      </div>
+    <div class="project-tile">
+      <a class="project-link" href="https://github.com/Aristidis13/Hamming-Numbers-Dijkstra-s-Approach" target="_blank">
+      <h2 class="project-title">Javascript Implementation with hamming sequence</h2>
+      <p>This was some interesting Codewars Kata. It asked to find a way to automatically produce the first 5000 Hamming Numbers (aka Regular Numbers) in less than 12 seconds. My solution was based in the Dijkstra's approach. More specifically, I created a list with the first Hamming Number (1) and added to the list every hamming number I found in the previous step.
+For example in the first step for the list [1]:<br>
+Add 21, 31, 41, 51 and 6*1 --> [1,2,3,4,5,6]<br>
+For the new list [1,2,3,4,5,6] Add: 2 * 3 * 4 * 5 * 6 *<br>
+Then clean the duplicate values if exist by recreating the array with the Set Keyword and sort them in ascending order. ....<br>
+The previous workflow continues till we have a list of 5000 Hamming Numbers</p>
+      </a></div>
+  </section>
+      <p> If you want to see all my work visit my <a id="profile-link" target="_blank" href="https://github.com/Aristidis13">Github</a></p>
+</main>
+
+
+<!-- CSS Section -->
+<style>
+:root {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size:16px;
+  --nav-red : rgb(200,50,50);
+}
+
+body {margin:0;}
+
+/*Navbar Section*/
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  display:flex;
+  align-items: center;
+  background-color:white;
+  box-shadow: 0 1px 6px 2px red;
+}
+
+/*List of nav*/
+nav ul {
+  list-style-type:none;
+  display:flex;
+  justify-content: space-evenly;
+  flex:1;
+}
+
+/*Containers of links*/
+nav ul li {
+  margin: 0.5rem 20px;  
+}
+
+/*Text in navbar*/
+nav ul li a {
+  text-decoration:none;
+  color: var(--nav-red);
+  font-size: 1.5rem;
+}
+
+/*-------------- Welcome Section ------------*/
+#welcome-section {
+  height: 100vh;
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  line-height:7rem;
+  letter-spacing:0.6rem;
+  font-weight:800;
+}
+
+/*-------------- Projects Section ------------*/
+#projects {
+  display:grid;
+  grid: "header header" auto ". a" auto "b ." / 1fr 1fr;
+  grid-auto-columns: 40%;
+  grid-auto-rows: auto;
+  justify-content: center;
+  margin: 1rem auto;
+  gap: 20px 20px;
+  width:80%;
+  
+}
+/*Heading of section*/
+#projects h2 {
+  grid-area: header;
+  justify-self: center;
+  font-size:3rem;
+  line-height: 3.5rem;
+}
+
+/*Container of a project*/
+.project-tile {
+  color: var(--nav-red);
+  background-color: aliceblue;
+  padding:2rem;
+  box-shadow: 0px 0px 5px 5px rgb(50,50,240)
+}
+
+/*Link of the project*/
+.project-tile a {
+  display:block;
+  margin: 3%;
+  text-decoration: none;
+  color:black;
+}
+
+/*Odd Projects*/
+#projects .project-tile:nth-child(2n-1) {
+  grid-area: a;
+}
+
+/*Even Projects*/
+#projects .project-tile:nth-child(2n) {
+  grid-area: b;
+}
+
+@media screen and (min-width:900px) and (max-width:1000px) { 
+  #projects {
+    width:90%;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:900px) {
+  :root {
+    font-size: 13px;
+  }
+  #projects {
+    width:90%;
+      grid: "header header" auto "a a" auto "b b" / 1fr 1fr;
+    gap:2rem 0;
+  }
+}
+
+@media screen and (max-width:499px) {
+  :root {
+    font-size: 11px
+  }
+}
+</style>
