@@ -1,0 +1,269 @@
+<!-- HTML Section -->
+<body>
+<main id="main">
+  <article>
+  <h1 id="title">Job Applications Survey</h1>
+  <p id="description">
+    How active are you in the pursuit of a job?
+    Answer the questions and learn as much as you can for you by clicking on every section.
+    Also help us learn more because we care.
+    Review answers or head to the next set of questions by pressing the dots below 
+  </p>
+     <div id="navigation-buttons">
+      <span id="section-1-btn" class="btn"></span>
+      <span id="section-2-btn" class="btn"></span>
+      <span id="section-3-btn" class="btn"></span>
+    </div>
+  </article>
+  <form id="survey-form">
+    <section id="section-1" class="form-section active">
+<!--Name-->
+  <label for="name" id="name-label">Name*:<input type="text" id="name" placeholder="Name" required></label>
+  
+<!--Email-->
+  <label for="email" id="email-label">Email*:<input type="email" id="email" placeholder="Email" required></label>
+<!--Number-->
+    <label for="number" id="number-label">Your age:<input type="number" id="number" min="18" max="67" placeholder="e.g 18"></label>
+<!--Projects-->
+      <label for="dropdown">How many projects do you have?
+       <select name="dropdown" id="dropdown">
+       <option name="-" value="-" selected>-</option>
+       <option name="less-than-6" value="less-than-6">Less than 6</option>
+       <option name="six-till-twelve" value="6-12">6-12</option>
+       <option name="thirteen-till-eighteen" value="13-18">13-18</option>
+       <option name="nineteen-till-twenty-five" value="19-25">19-25</option>
+       <option name="more-than-twenty-five" value="more-than-25">More than 25</option>
+      </select>
+      </label>
+    </section>
+    <section id="section-2" class="form-section">
+<!--Technologies-->
+    <fieldset id="technologies">
+      <legend>What technologies must be included in order for you to apply?</legend>
+      <label for="javascript" id="javascript-label"><input type="checkbox" id="javascript" value="javascript">Javascript</label>
+      <label for="css" id="css-label"><input type="checkbox" id="css" value="css">CSS</label>
+      <label for="html" id="html-label"><input type="checkbox" id="html" value="html">HTML</label>
+      <label for="python" id="python-label"><input type="checkbox" id="python" value="python">Python</label>
+      <label for="c#" id="c#-label"><input type="checkbox" id="c#" value="C#">C#</label>
+      <label for="c++" id="c++-label"><input type="checkbox" id="c++" value="C++">C++</label>
+      <label for="c" id="c-label"><input type="checkbox" id="c" value="c">C</label>
+      <label for="nodejs" id="nodejs-label"><input type="checkbox" id="nodejs" value="nodejs">Node JS</label>
+      <label for="php" id="php-label"><input type="checkbox" id="php" value="php">PHP</label>
+      <label for="angular" id="angular-label"><input type="checkbox" id="angular" value="angular">Angular</label>
+      <label for="angularjs" id="angularjs-label"><input type="checkbox" id="angularjs" value="AngularJS">AngularJS</label>
+      <label for="express" id="express-label"><input type="checkbox" id="express" value="express">ExpressJS</label>
+      <label for="react-native" id="react-native-label"><input type="checkbox" id="react-native" value="react-native">React Native</label>
+      <label for="ReactJS" id="ReactJS-label"><input type="checkbox" id="ReactJS" value="reactjs">React JS</label>
+      <label for="mongodb" id="mongodb-label"><input type="checkbox" id="mongodb" value="mongodb">Mongo DB</label>
+      <label for="nosql" id="nosql-label"><input type="checkbox" id="nosql" value="nosql">NoSQL</label>
+      <label for="java" id="java-label"><input type="checkbox" id="java" value="java">Java</label>
+    </fieldset>
+    </section>
+    <section id="section-3" class="form-section">
+<!--Computer Science Degree-->
+    <fieldset id="computer-science-degree">
+      <legend>Do you have a CS Degree?</legend>
+      <label for="yes" id="yes-label"><input type="radio" id="yes" name="computer-science-degree" value="yes">Yes</label>
+      <label for="no" id="no-label"> <input type="radio" id="no" name="computer-science-degree" value="no">No</label>
+    </fieldset>
+ <!--Experience-->
+    <fieldset id="experience">
+      <legend>Do you have working experience?</legend>
+          <label for="yes-exp" id="yes-label"><input type="radio" id="yes-exp" name="experience" value="yes">Yes</label>
+      <label for="no-exp" id="no-label"> <input type="radio" id="no-exp" name="experience" value="no">No</label>
+    </fieldset>      
+<!--Comments-->
+    <label for="feedback">Have more to say?
+      <textarea id="feedback" placeholder="Leave your Message"></textarea>
+    </label>
+    <button type="submit" id="submit">Inform Us</button>
+    </section>
+  </form>
+</main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- CSS Section -->
+<style>
+:root {--borderVar: 1px solid #e68100;
+--main-color: #e68100;
+font-size:16px;
+}
+
+body {
+    background: #777 url(https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) center/cover no-repeat border-box border-box fixed;
+  margin:0;
+  font-family: helvetica;
+}
+
+#main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  color: var(--main-color);
+  background-color:rgba(1,1,1,.5);
+  min-height:100vh;
+  height:100%;
+}
+
+  #navigation-buttons {
+    justify-content: center;
+    display:flex;
+  }
+
+#main article {
+  flex: 0 0 auto;
+  margin-left: auto;
+  margin-right: 3%;
+  width:25%;
+}
+
+#navigation-buttons btn{
+margin: 0 auto;
+}
+
+#main form {
+  flex: 0 0 auto;
+  margin-right: auto;
+  margin-left: 3%;
+  width:25%;
+}
+/*Sections in form*/
+#section-1, #section-2, #section-3 {
+   display:none;
+}
+
+section.form-section.active {
+  display:unset !important;
+}
+
+.btn {
+  background-color: var(--main-color);
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  display:inline-block;
+  margin: 20px 10px;
+}
+
+/*Section 1*/
+#name, #email,#number {
+  min-width:200px;
+  flex: 0 1 220px;
+  margin: 5px 0 20px;
+  border:none;
+  border-bottom: var(--borderVar);
+  margin-left: auto;
+  background-color:transparent;
+  color: var(--main-color);
+}
+#name-label, #email-label,#number-label {
+  margin-bottom: 20px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+
+#name:focus-visible,#email:focus-visible, #number:focus-visible,#feedback:focus-visible {
+  outline:none;
+}
+
+#dropdown {
+  margin-left: auto;
+}
+
+label {
+  display:flex;
+  flex-flow:row wrap;
+}
+
+/*Section 2*/
+input[type="checkbox"] {
+  margin: 0 5px 0 20px;
+}
+
+#technologies label {
+  margin: 5px 0;
+}
+
+/* Section 3 */
+#computer-science-degree, #experience,#technologies {
+  display:flex;
+  flex-flow: row wrap;
+  border:none;
+  margin-bottom: 20px;
+}
+
+#feedback {
+  background-color: transparent;
+  border:none;
+  border-bottom: var(--borderVar);
+  width:100%;
+  color: var(--main-color);
+}
+
+/*Button*/
+button[type="submit"] {
+  background-color: #555;
+  padding: 10px 30px;
+  border:none;
+  transition: box-shadow 1s ease-in-out, color 1s ease-out;
+  border-radius:20px;
+  margin-top: 25px;
+}
+button:hover {
+  box-shadow: inset 120px 0 0 1px green;
+  color:white;
+}
+
+textarea {
+  display:block;
+}
+
+@media screen and (max-width:600px) {
+  #main {
+    flex-flow: column wrap;
+    justify-contents: center;
+  }
+  #navigation-buttons {
+    justify-content: center;
+    display:flex;
+  }
+  
+  #main article {
+    margin-right: auto;
+    width:70%;
+    text-align:justify;
+    text-indent: 25px;
+  }
+  .btn {
+    margin: 20px 10px;
+  }
+  #main form {
+    margin-left: auto;
+    width: 80%;
+  }
+}
+</style>
+
+<!-- Plain JS Section -->
+<script>
+var btn = document.querySelectorAll('.btn');
+var section = document.querySelectorAll('.form-section');
+btn.forEach( el => el.addEventListener('click', function() {changeSlide(this,section);}, false));
+function changeSlide(spanEl,section) {
+   section.forEach( el => {
+       el.classList.remove("active");
+   });
+  if(spanEl.id.includes('1')) section[0].classList.add("active");
+  else if(spanEl.id.includes('2')) section[1].classList.add("active");
+  else if(spanEl.id.includes('3')) section[2].classList.add("active");
+}
+</script>
