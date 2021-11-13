@@ -1,0 +1,178 @@
+<!-- HTML Section-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet"> 
+    <body>
+        <header id="header">
+            <nav id="nav-bar">
+                <div class="logo">
+                    <img id="header-img" src="https://freesvg.org/img/1488216538.png" height="50" alt="Books">  
+                    <h1 id="title">Books4All</h1>
+                </div>
+                <ul id="nav-links">
+                    <li class="nav-item"><a href="#categories-container" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="#newsletter" class="nav-link">Sign Up to our Newsletter</a></li>
+                    <li class="nav-item"><a href="#product" class="nav-link">About Us</a></li>
+                </ul>
+                <div id="burger">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="intro">
+                <div id="first-text">
+                    <p class="message">Do you want a magic formula to magically solve all problems in your life? <br>
+                    You won't find it here!!!</p><br>
+                    <p class="message">Do you want guidance and wisdom beyond your age?<br>
+                    Then a book is all you need and books we provide!</p>
+                </div>
+                <figure><img src="https://i.pinimg.com/originals/1b/6d/c5/1b6dc5d0fcb95b9e9c82d63630307e59.png" alt="Impressive Book Order">
+                    <figcaption style="text-align:center;">JoJo Publishing Image</figcaption>
+                </figure>
+            </section>
+            <section id="categories-container">
+                <h2 id="category-header" class="header">Books for all Interests</h2>
+                <section id="categories">
+                    <div id="category-1" class="category">
+                        <h3 class="header"> Category 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="category-2" class="category">
+                        <h3 class="header"> Category 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="category-3" class="category">
+                        <h3 class="header"> Category 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="category-4" class="category">
+                        <h3 class="header"> Category 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </section>
+            </section>
+            <section id="product">
+                <h2 id="about-us" class="header">About Us</h2>
+                <iframe id="video" width="560" height="500" src="https://www.youtube.com/embed/guY6w20Lv6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        <section id="newsletter">
+            <h2 class="header">Sign Up to our Newsletter</h2>
+            <form id="form" action="https://www.freecodecamp.org/email-submit" type="POST">
+                <label for="email"> Email: </label>
+                <input id="email" type="email" name="email" placeholder="Enter your email">  
+                <input id="submit" type="submit" value="Sign-Up">
+            </form>
+        </section>
+      </main>
+    </body>
+    
+    
+    <--CSS Section -->
+    <style>
+    #main {
+  color: rgba(70,70,70,1);
+  text-align: center;
+  margin:0;
+  display:grid;
+  grid: auto auto / 50% 50%;
+  grid-template-areas: "photo intro" "details details";
+  font-family: Montserrat, system-ui;
+}
+body {
+  margin:0;
+}
+
+/*Profile Image info*/
+#img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+#image {
+  max-width:100%;
+  width:80%;
+  height:auto;
+}
+
+#img-caption {
+  font-style:italic;
+  font-size:1.5em;
+}
+
+h1#title {
+  font-size:3rem;
+  animation : color 4s ease-in .2s infinite;
+  padding: 3%;
+  font-family: 'Josephin Sans', system-ui ;
+}
+@keyframes color {
+  0% { color: rgba(0,80,80,1);}
+  50% { color:rgba(200,0,200,1);}
+  100% { color: rgba(0,80,80,1);}
+}
+
+.text {
+  text-align:justify;
+  text-indent: 20px;
+  line-height:1.5em;
+  width: 80%;
+  margin: 40px auto 40px;
+}
+
+#more-tribute-info{
+  display: flex;
+  flex-flow: row nowrap;
+  grid-area: details;
+  background: #f3f3f3;
+}
+#more-tribute-info section {
+  margin: auto auto;
+  flex: 0 0 26%;
+}
+
+cite {
+  font-weight:600;
+}
+
+q {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  padding: 50px 0 50px;
+}
+
+del {
+  color: rgba(255,0,0,1);
+  animation:color 2s linear .1s infinite;
+}
+
+dfn {
+  color: black;
+  font-style:italic;
+  font-weight:bold;
+}
+
+footer {
+  font-family:Montserrat, system-ui;
+  padding: 3rem;
+  font-size: 1.6rem;
+  text-align:center;
+}
+
+#tribute-link {
+  text-decoration: none;
+  color: gray;
+}
+
+@media screen and (max-width:1000px) {
+  #main {
+      grid: auto / 100%;
+  }
+}
+    </style>
