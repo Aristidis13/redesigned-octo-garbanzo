@@ -80,3 +80,8 @@ Then clean the duplicate values if exist by recreating the array with the Set Ke
 The previous workflow continues till we have a list of 5000 Hamming Numbers
 
 If you have a different/better approach I would love to hear you ;)
+
+# HTML-CSS-JS Single Page Projects
+These are pens I created with the help of Codepen.
+    Visit https://codepen.io/aristidis13 to see them
+I present the code here for bookeeping.
