@@ -84,6 +84,7 @@
 }
   
 /*-----------Header Section--------------*/
+
 #header {
     position: fixed;
     top:0;
