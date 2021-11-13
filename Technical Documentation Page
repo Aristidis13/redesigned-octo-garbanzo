@@ -1,0 +1,283 @@
+<!--HTML Section--->
+<body>
+<aside>
+    <nav id="navbar">
+      <header>Javascript</header>
+      <ol>
+        <li class="nav-item"><a href="#Basics" class="nav-link">Basics</a></li>
+        <li class="nav-item"><a href="#Variable_Scope" class="nav-link">Variable Scope</a></li>
+        <li class="nav-item"><a href="#Data_Structures" class="nav-link">Data Structures</a></li>
+        <li class="nav-item"><a href="#Literals" class="nav-link">Literals</a></li>
+        <li class="nav-item"><a href="#Variable_Hoisting" class="nav-link">Variable Hoisting</a></li>
+      </ol>
+    </nav>
+  </aside>
+<main id="main-doc">
+  <section id="Basics" class="main-section">
+    <header class="main-section-header">Basics</header>
+    <div>
+      <p>JavaScript borrows most of its syntax from Java, C, and C++, but it has also been influenced by Awk, Perl, and Python.JavaScript is <strong>case-sensitive</strong> and uses the <strong>Unicode</strong> character set. For example, the word Früh (which means "early" in German) could be used as a variable name.</p>
+      <div class="code-example">
+        <code>let Früh = "foobar"</code>
+        <p>But, the variable <q>früh</q> is not the same as <q>Früh</q> because JavaScript is case sensitive.</p>
+      </div>
+      <p>It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.The source text of JavaScript script gets scanned from left to right, and is converted into a sequence of input elements which are</p>
+      <ul>
+        <li><em>tokens,</em></li>
+        <li><em>control characters,</em></li>
+        <li><em>line terminators,</em></li>
+        <li><em>comments, or</em></li>
+        <li><em>whitespaces</em></li>
+      </ul>
+    </div>
+  </section>
+  <section id="Variable_Scope" class="main-section">
+    <header class="main-section-header">Variable Scope</header>
+    <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+    <p>JavaScript before ECMAScript 2015 does not have block statement scope. Rather, a variable declared within a block is local to the function (or global scope) that the block resides within.</p>
+    <p>For example, the following code will log 5, because the scope of x is the global context (or the function context if the code is part of a function). The scope of x is not limited to the immediate if statement block.</p>
+    <code>
+            if(true) var x =<5; <br>
+            console.log(x); // x is 5
+         </code>
+  </section>
+  <section id="Data_Structures" class="main-section">
+    <header class="main-section-header">Data Structures</header>
+    <div>
+      <p>Although these data types are relatively few, they enable you to perform useful functions with your applications. Objects and functions are the other fundamental elements in the language. You can think of objects as named containers for values, and functions as procedures that your script can perform.</p>
+      <p>JavaScript is a dynamically typed language. This means you don't have to specify the data type of a variable when you declare it. It also means that data types are automatically converted as-needed during script execution.</p>
+      <p>So, for example, you could define a variable as follows: <code>var answer = 42;</code></p>
+    </div>
+  </section>
+  <section id="Literals" class="main-section">
+    <header class="main-section-header">Literals</header>
+    <div>
+      <p><em>Literals</em> represent values in JavaScript. These are fixed values—not variables—that you <em>literally</em> provide in your script. This section describes the following types of literals:</p>
+      <p>The Boolean type has two literal values: true and false.</p>
+      <p><strong>Note:</strong> Do not confuse the primitive Boolean values true and false with the true and false values of the Boolean object.</p>
+      <p>The Boolean object is a wrapper around the primitive Boolean data type.</p>
+    </div>
+  </section>
+  <section id="Variable_Hoisting" class="main-section">
+    <header class="main-section-header">Variable Hoisting</header>
+    <p>Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception.
+        This concept is known as hoisting. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of undefined. So even if you declare and initialize after you use or refer to this variable, it still returns undefined.</p>
+    <div>
+      <code>
+        /*<br>
+         * Example 1<br>
+         */<br>
+           console.log(x=== undefined); // true <br>
+           var x =3;<br>
+           </code><br><br>
+           <code>
+          /*<br>
+           * Example 2<br>
+           */<br>
+            // will return a value of undefined<br>
+            var myvar ='my value';<br>
+            (function<() {<br>
+              console.log(myvar); // undefined<br>
+              var myvar = 'local value';<br>
+            })();<br>
+      </code>
+    </div>
+  </section>
+</main>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+  
+  <!--CSS Section-->
+  <style>
+  /*--------------- Γενικά Στοιχεία -------------*/
+:root {
+  font-size:16px;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+  display: grid;
+  grid: "aside main" auto / 25% 75%;
+}
+
+/*-------------- 1 Aside bar ------------------*/
+aside {
+  grid-area: aside;
+  position: relative;
+}
+
+/*Nav Στοιχείο*/
+#navbar {
+  display:flex;
+  flex-flow: column nowrap;
+  align-items : center;
+  position: sticky;
+  top: 0; 
+  margin-top: 7rem;
+}
+
+ol {
+  padding-left:0;
+  width: 60%;
+}
+
+ol li {
+  border-bottom: 1px solid green;
+}
+
+ol li:last-child {
+  border:none;
+}
+
+ol li a {
+  font-size:1.5rem;
+  color:black;
+  text-decoration:none;
+  padding: 5px 0;
+  margin:5px 0;
+  display: block;
+  position:relative;
+}
+
+ol li a::after {
+  content: '\261B';
+position: absolute;
+right: 0;
+    transition: transform .4s cubic-bezier(.3,.7,.7,.9) .05s;
+}
+
+.nav-item:hover a::after {
+   transform: translateX(-1rem) rotateY(180deg);
+}
+
+/*------------------- 2 - Main ------------------*/
+#main-doc {
+  grid-area: main;
+  padding:0 10%;
+}
+
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+/* Every Section that contains a */
+.main-section {
+  position: relative;
+	z-index: 0;
+	border-radius: 10px;
+	overflow: hidden;
+  padding: 2.5rem;
+  min-height:520px;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:center;
+  margin-bottom:5rem;
+}
+
+.main-section:before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+		animation: rotate 4s linear infinite;
+	}
+
+.main-section:after {
+  		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+}
+
+p {
+  text-align:justify;
+  text-indent:15px;
+}
+
+code {
+  background: #d8d8d8;
+}
+
+/*Header of every .main-section*/
+.main-section-header {
+width: 100%;
+border: 1px solid #333;
+font-size: 2rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 0;
+transition: 1s;
+margin: 0 auto;
+}
+
+.main-section-header:hover {
+  box-shadow: inset 10rem 10rem 1px 1px rgba(140,150,150,.5);
+  color: rgb(150,50,0);
+}
+
+.main-section-header::before, .main-section-header::after {
+  position: absolute;
+  background: white;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.main-section-header::before {
+height: 133%;
+width: 98%;
+}
+
+.main-section-header::after {
+width: 101%;
+height: 1.6rem;
+}
+
+.main-section-header:hover::before {
+  width: 0px;
+  background: #fff;
+}
+
+.main-section-header:hover::after {
+  height: 0px;
+  background: #fff;
+}
+
+/*------- 3 Στοιχεία και στο aside και στο main ------*/
+header {
+  color:black;
+  font-size: 2rem;
+  font-weight:600;
+  margin-top: 4rem;
+}
+
+ol,ul {
+  list-style-type: none;
+}
+
+@media screen and (max-width:900px) {
+  body {
+  display: grid;
+  grid: "aside" auto "main"auto / 100%;
+}
+}
+</style>
