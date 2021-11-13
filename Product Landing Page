@@ -1,0 +1,435 @@
+<!-- HTML Section --->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet"> 
+    <body>
+        <header id="header">
+            <nav id="nav-bar">
+                <div class="logo">
+                    <img id="header-img" src="https://freesvg.org/img/1488216538.png" height="50" alt="Books">  
+                    <h1 id="title">Books4All</h1>
+                </div>
+                <ul id="nav-links">
+                    <li class="nav-item"><a href="#categories-container" class="nav-link">Categories</a></li>
+                    <li class="nav-item"><a href="#newsletter" class="nav-link">Sign Up to our Newsletter</a></li>
+                    <li class="nav-item"><a href="#product" class="nav-link">About Us</a></li>
+                </ul>
+                <div id="burger">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="intro">
+                <div id="first-text">
+                    <p class="message">Do you want a magic formula to magically solve all problems in your life? <br>
+                    You won't find it here!!!</p><br>
+                    <p class="message">Do you want guidance and wisdom beyond your age?<br>
+                    Then a book is all you need and books we provide!</p>
+                </div>
+                <figure><img src="https://i.pinimg.com/originals/1b/6d/c5/1b6dc5d0fcb95b9e9c82d63630307e59.png" alt="Impressive Book Order">
+                    <figcaption style="text-align:center;">JoJo Publishing Image</figcaption>
+                </figure>
+            </section>
+            <section id="categories-container">
+                <h2 id="category-header" class="header">Books for all Interests</h2>
+                <section id="categories">
+                    <div id="category-1" class="category">
+                        <h3 class="header"> Category 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="category-2" class="category">
+                        <h3 class="header"> Category 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="category-3" class="category">
+                        <h3 class="header"> Category 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="category-4" class="category">
+                        <h3 class="header"> Category 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </section>
+            </section>
+            <section id="product">
+                <h2 id="about-us" class="header">About Us</h2>
+                <iframe id="video" width="560" height="500" src="https://www.youtube.com/embed/guY6w20Lv6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        <section id="newsletter">
+            <h2 class="header">Sign Up to our Newsletter</h2>
+            <form id="form" action="https://www.freecodecamp.org/email-submit" type="POST">
+                <label for="email"> Email: </label>
+                <input id="email" type="email" name="email" placeholder="Enter your email">  
+                <input id="submit" type="submit" value="Sign-Up">
+            </form>
+        </section>
+      </main>
+    </body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- CSS Section --->
+
+<style>
+/*Equal as html element*/
+:root {
+    font-size:16px;
+    --main-color: #1C1C1C;
+    --text-color: rgb(200,200,120);
+    font-family: Verdana, sans-serif;
+    box-sizing:border-box;
+}
+  
+/*-----------Header Section--------------*/
+#header {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    border: 10px solid transparent;
+    background: var(--main-color);
+    z-index:200;
+    border-radius: 50% /50%;
+    animation: rotation 4s ease 3s 1;
+}
+
+/*Animation for header*/
+@keyframes rotation {
+    from { transform: rotateY(0,0,0,0deg); }
+    to { transform: rotate3d(1,0,0,360deg); }
+}
+
+/*Container of logo*/
+.logo {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  /*Logo of header*/
+  #title {
+    color: var(--text-color);
+    text-shadow: 0px 0px 9px #1bc;
+  }
+  
+  /*logo image*/
+  #header-img {
+    filter: drop-shadow(0px 0px 15px #1bc);
+    margin: 11px;
+    padding: 0 1% 0 7%;
+  }
+
+  /*Unordered List that contains all links*/
+  #nav-links {
+    list-style-type:none;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 28px;
+    flex:3;
+  }
+
+  /*Every li item inside the nav bar*/
+  #nav-links .nav-item { 
+    margin: 0 auto;
+    transition: transform .4s ease-in-out .1s;
+  }
+  
+#nav-bar {
+  display: flex;
+}
+
+  #nav-links .nav-item:hover {
+    transform: scale(1.3);
+  }
+  /*Link inside the li of the unordered list that exists in nav-bar*/
+  .nav-link {
+    text-decoration: none;
+    font-size:1.6rem;
+    color: var(--text-color);
+    text-shadow: 0px 0px 9px #1bc;
+  }
+  
+  /*Burger Menu*/
+  #burger {
+    color: #0a0a0a;
+    display:none;
+    padding: 0.5rem;
+  }
+  .line {
+    background: yellow;
+    width: 40px;
+    height: 4px;
+    margin: 5px;
+  }
+
+  /*Sections*/
+  main {
+    position: relative;
+    top: 80px;
+    display:flex;
+    flex-flow:column nowrap;
+  }
+  .header {
+    text-align:center;
+  }
+  
+  /*Section intro*/
+  #intro {
+    display:flex;
+    margin-top: 3rem;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  /*Text section*/
+  #first-text {
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    width:39%;
+    
+  }
+  /*Text in cta*/
+  .message {
+    font-size:2.3rem;
+    line-height:2.3rem;
+    font-family: Rochester;
+  }
+  
+  /*Section that contains boxes -each box is a category*/
+  #categories-container {
+    padding-top:5%;
+  }
+  
+  #categories {
+    text-align: center;
+    width:80%;
+    margin: auto;
+    display:flex;
+    flex-flow: row wrap;
+  }
+  
+  .category {
+    width:20%;
+    margin: 10px;
+    text-align:justify;
+    text-justify: inter-character;
+    text-indent: 20px;
+    color: var(--text-color);
+    background-color: orangered;
+    display:flex;
+    flex-flow:column wrap;
+    border-radius: 30px;
+    padding: 20px;
+    flex: 200px;
+    font-family: sans-serif;
+  }
+  .category h3 {
+    text-align:center;
+    color: var(--text-color);
+    font-size: 1.4rem;
+  }
+  
+  figure {
+    width: 40%;
+    margin:0;
+  }
+  
+  figure img {
+    width:100%;
+  }
+  
+  /*Section 2*/
+  /*Form for Newsletter*/
+  #newsletter {
+    padding:5% 0;
+    background-color: var(--text-color);
+    margin:10px 0;
+    border-radius: 70% 30% 70% 30%;
+  }
+  
+  #newsletter .header, #category-header, #about-us {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin:0;
+    padding: 0.8rem 0 2.5rem;
+  }
+  
+  /*Form*/
+  #form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*Label of email*/
+  label[for="email"] {
+    font-size: 2.6rem;
+    margin-right: 2rem;
+  }
+  
+  /*Email Input*/
+  #email {
+    margin-right:2rem;
+    font-size:1.4rem;
+    height:2.6rem;
+    width: 20vw;
+  }
+  
+  /*Newsletter Form Submit Button*/
+  #submit {
+    padding: 0.45rem 2.8rem;
+    font-size:1.8rem;
+    background-color: orange;
+    color:white;
+    transition: transform .4s ease .1s;
+    border:none;
+  }
+  
+  #submit:hover {
+    transform: scale(1.2);
+  }
+  
+  /*----------------Section 3-------------------*/
+  #product {
+    padding:5rem 0 3rem;
+  }
+  
+  #video {
+    margin: 0 auto;
+    display: block;
+    width: 891px;
+  }
+
+/*Page media query except navbar for mobiles*/  
+  @media screen and (max-width:630px) {
+    :root {
+      font-size: 12px;
+    }
+    #intro {
+      flex-flow: column wrap;
+    }
+    #first-text {
+      width: 80%;
+    }
+    #intro figure {
+      order: -1;
+      width: 80%;
+    }
+    #video {
+      width: 80%;
+      height: 245px;
+    }
+    #newsletter {
+      border-radius: 80%;
+    }
+    #form {
+      flex-flow: row wrap;
+    }
+    #email {
+      flex:50%;
+    }
+    #submit {
+      margin-top: 2rem;
+    }
+  }
+/*Page media query for page except nabar for tablets*/
+  @media screen and (min-width:631px) and (max-width:1000px) {
+    :root {
+      font-size: 14px;
+    }
+    #intro {
+      flex-flow: column-reverse wrap;
+    }
+    #first-text, figure {
+      width: 80%;
+    }
+    #video {
+      width: 80%;
+    }
+    #newsletter {
+      border-radius: 80%;
+    }
+    #form {
+      flex-flow: row wrap;
+    }
+    label[for="email"] {
+      align-self: first baseline;
+    }
+    #email {
+      flex: 50%;
+      margin-bottom: 20px;
+    }
+  }
+
+
+
+  /*Test*/
+/*Lines*/
+  #nav-bar.show .line1 {
+    display: none;
+  }
+#nav-bar.show .line2 {
+  transform: translate(-0.6rem,0.8rem) rotate(45deg) translate(0.2rem,.6rem)
+  }
+#nav-bar.show .line3 {
+  transform: translate(-1rem,0.65rem) rotate(-45deg) translate(1rem,-1rem);
+}
+
+/**/
+@media screen and (max-width:800px) {
+  #nav-bar.show .logo{
+    flex: 50%;
+  }
+
+  
+  #nav-links {
+    display: none;
+   }
+  .show #nav-links {
+    display: flex;
+    position: fixed;
+    right: 0;
+    left:auto;
+    top: 7vh;
+    flex-flow: column nowrap;
+    padding: 1vw;
+    width: max-content;
+    margin: 10px 0;
+    background: var(--main-color);
+  }
+/*Li items */
+  #nav-links .nav-item {
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    flex: 100%;
+    border-bottom: solid thin var(--text-color, green);
+  }
+  .show #nav-links .nav-item:hover {
+    transform: translateX(1rem);
+  }
+
+  #burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+</style>
+
+
+<!-- JS Section --->
+<script>
+document.addEventListener('DOMContentLoaded', nav);
+function nav() {
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav-bar');
+    burger.addEventListener('click', ()=>{
+        nav.classList.toggle('show')
+    })
+}
+</script>
