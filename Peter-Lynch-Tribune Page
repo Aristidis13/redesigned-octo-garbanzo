@@ -81,6 +81,7 @@
   grid-template-areas: "photo intro" "details details";
   font-family: Montserrat, system-ui;
 }
+
 body {
   margin:0;
 }
